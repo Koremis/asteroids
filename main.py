@@ -1,14 +1,14 @@
-from constants import *
-from player import *
+from constants import (
+SCREEN_WIDTH,
+SCREEN_HEIGHT)
+from player import Player
 import pygame
 
 
 def main():
     pygame.init()
     clock = pygame.time.Clock()
-    x = SCREEN_WIDTH / 2
-    y = SCREEN_HEIGHT / 2
-    player = Player(x, y)
+    player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
     dt = 0
     print("Starting Asteroids!")
     print(f"Screen width: {SCREEN_WIDTH}")
@@ -21,8 +21,8 @@ def main():
 
         screen.fill((0, 0, 0))
         player.draw(screen)
-        pygame.display.flip()
         dt = clock.tick(60) / 1000
+        pygame.display.flip()
 
 
 if __name__ == "__main__":
