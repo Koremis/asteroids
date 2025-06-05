@@ -44,8 +44,8 @@ def main():
                 quit()
             for shot in shots:
                 if ast.collided(shot):
-                    ast.kill()
                     shot.kill()
+                    ast.split(ast)
 
         screen.fill((0, 0, 0))
         for obj in drawable:
