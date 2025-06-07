@@ -17,4 +17,3 @@ class Shot(CircleShape):
     def update(self, dt):
         self.position += self.velocity * PLAYER_SHOOT_SPEED * dt
         return self.position
-

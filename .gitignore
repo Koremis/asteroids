@@ -1,2 +1,5 @@
 venv/
 __pycache__/
+pause.py
+game_over.py
+data
